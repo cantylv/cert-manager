@@ -2,9 +2,11 @@ apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   acme:
-    email: user@demo-vkcloud.ru
+    email: physic2003@mail.ru
     preferredChain: ""
     privateKeySecretRef:
       name: letsencrypt-prod
